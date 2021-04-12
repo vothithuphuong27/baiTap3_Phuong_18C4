@@ -2,7 +2,6 @@ import math
 from collections import Counter
 import numpy as np
 
-
 class Point:
     value = []
     label = None
@@ -101,7 +100,7 @@ def main_ex_3():
         x[:4], get_label_from_array(x[-3:])), data.get("training"))))
     testing_dataset = np.array(list(map(lambda x: Point(
         x[:4], get_label_from_array(x[-3:])), data.get("testing"))))
-    #như bài 2b
+
     real_label = []
     predicted_label = []
     for test in testing_dataset:
@@ -116,6 +115,5 @@ def main_ex_3():
     print("Confusion matrix: ")
     print(cm)
     print("Accuracy is: ", np.diagonal(cm).sum()/cm.sum())
-
 
 main_ex_3()
